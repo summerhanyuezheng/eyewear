@@ -1,0 +1,87 @@
+.sign-up-center {
+  width: 500px;
+  height: 350px;
+  margin: 40px auto;
+  border: 1px solid lightgray;
+  position: relative;
+}
+
+.sign-up-center p {
+  font-size: 12px;
+  color: #696868;
+  text-align: start;
+  margin-left: 75px;
+  margin-bottom: 10px;
+}
+
+.signup-content {
+  margin-top: 50px;
+}
+
+.signup-email,
+.signup-password {
+  width: 350px;
+  height: 30px;
+  display: block;
+  border: 1px solid lightgray;
+  margin-bottom: 20px;
+  margin: 0 auto;
+}
+
+.signup-email::placeholder {
+  color: rgba(194, 195, 196, 0.957);
+}
+
+.signup-password::placeholder {
+  color: rgba(194, 195, 196, 0.957);
+}
+
+.signup-email {
+  margin-bottom: 20px;
+}
+
+.signup-button {
+  padding: 10px 20px !important;
+  color: white;
+  background-color: black;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.signup-button span {
+  display: inline-block;
+  height: 10px;
+  width: 20px;
+}
+
+.no-account {
+  background-color: #f2f2f2;
+  position: absolute;
+  bottom: 0px;
+  font-size: 11px;
+  padding: 25px 0px;
+  color: #4a4a4a;
+  width: 500px;
+  border-top: 1px solid lightgray;
+  font-weight: 600;
+}
+
+.no-account a {
+  color: #4a4a4a;
+  background-color: #f2f2f2;
+  font-size: 11px;
+  padding: 12px 12px;
+  border: 1px solid lightgray;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.no-account a:hover {
+  background-color: white;
+}
+
+.signup-button:hover {
+  background-color: rgba(0, 0, 0, 0.786);
+}

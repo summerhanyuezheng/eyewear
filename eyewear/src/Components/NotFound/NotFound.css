@@ -1,0 +1,33 @@
+.pink img {
+  object-fit: cover;
+  height: 100px;
+}
+
+.error-code {
+  font-size: 40px;
+  color: skyblue;
+}
+
+.page-not-found {
+  font-size: 35px;
+  color: skyblue;
+  margin-bottom: 10px;
+}
+
+.pink {
+  background-color: palevioletred;
+  width: 60%;
+  padding: 30px;
+  overflow: hidden;
+  border: 30px solid skyblue;
+}
+
+.wrapper {
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}

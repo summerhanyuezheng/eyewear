@@ -1,0 +1,179 @@
+.whole-detail {
+  width: 100%;
+}
+
+.detail-center {
+  height: 500px;
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  /* align-items: center; */
+  border: 1px solid lightgray;
+  /* padding: 20px; */
+  box-sizing: border-box;
+  padding-left: 0px;
+  /* padding-bottom: 100px; */
+  font-family: Tajawal, Helvetica, Arial, sans-serif;
+}
+
+.detail-img img {
+  width: 350px;
+  object-fit: contain;
+ 
+}
+
+.detail-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  
+}
+
+.detail-img {
+  width: 350px;
+  height: 350px;
+  background-color: rgba(231, 230, 226, 0.547);
+  display: flex;
+  border-left: 1px solid lightgray;
+  margin-top:80px;
+}
+
+.detail-name {
+  font-size: 32px;
+  font-family: Tajawal, Helvetica, Arial, sans-serif;
+  text-align: left;
+  margin-left: 30px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.lorem {
+  font-size: 12px;
+  color: #4a4a4a;
+  width: 420px;
+  text-align: left;
+  line-height: 18px;
+  margin-left: 30px;
+}
+
+.detail-price {
+  font-size: 32px;
+  text-align: left;
+  margin-left: 30px;
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+.size-text {
+  display: inline-block;
+  width: 420px;
+  font-size: 12px;
+  color: #818181;
+  border-top: 1px lightgray solid;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.input-area {
+  width: 420px;
+  height: 35px;
+  border-style: none;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin-left: 30px;
+}
+
+datalist {
+  width: 420px;
+}
+
+.detail-left img {
+  width: 120px;
+  border: 1px solid lightgray;
+  margin: 15px;
+}
+
+.detail-add,
+.detail-remove {
+  width: 158px;
+  color: white;
+  background: black;
+  font-size: 12px;
+  margin-top: 10px;
+  line-height: 30px;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.detail-remove {
+  background: none;
+  border: 1px solid lightgray;
+  color: #4a4a4a;
+}
+
+.size-text {
+  text-align: left;
+}
+
+.color-circle{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.color-div .ppink{
+  background-color: pink;
+}
+
+
+.color-div .black{
+  background-color: black;
+}
+
+.color-div .blue{
+  background-color: blue;
+}
+
+.color-div .brown{
+  background-color: brown;
+}
+
+.color-div .yellow{
+  background-color: rgb(255, 166, 0);
+}
+
+.color-div .green{
+  background-color: green;
+}
+
+
+.color-div{
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 20px;
+  
+}
+
+.color-section{
+  width: 300px;
+ 
+}
+
+
+/* When a color circle is selected, show the white mark */
+.selected::after {
+  content: '✓';
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px; 
+  z-index: 1;
+}

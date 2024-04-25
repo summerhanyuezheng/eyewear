@@ -1,0 +1,16 @@
+.footer {
+  background-color: #f0f0f0;
+  margin-top: 400px;
+  padding: 20px;
+}
+
+.footer-logo {
+  object-fit: cover;
+  width: 8%;
+  height: 8%;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  font-size: 12px;
+}
