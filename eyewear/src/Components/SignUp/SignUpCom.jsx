@@ -24,8 +24,8 @@ export default function SignUpCom({ options = "Sign Up", switchOpt = "Already ha
         // Signed in
         const user = userCredential.user
         console.log("user", user)
-        alert("Welcome to Salinaka Eyewear!")
-        navigate("/home")
+        alert("Please Log In now")
+        navigate("/login")
       })
       .catch(error => {
         const errorCode = error.code

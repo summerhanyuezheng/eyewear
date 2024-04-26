@@ -5,6 +5,7 @@ import "../Details/DetailCom.css"
 import { useDispatch } from "react-redux"
 import { addBasketList, removeBasketList } from "../../store/basket"
 import { useSelector } from "react-redux/es/hooks/useSelector"
+import { Link } from "react-router-dom"
 
 const products = [
   {
@@ -89,9 +90,39 @@ export default function DetailCom() {
   const basketList = useSelector(state => state.basketStore.basketList)
   const inBasket = basketList.some(basketItem => basketItem.id === item.id)
 
+
+  // Function called when "Add to basket" is clicked
+const addItemToBasket = () => {
+  // Construct the item object including the selected color and size
+  const itemToAdd = {
+    ...item,          // Spread the existing item details
+    color: selectedColor, // Include the selected color
+    size: size,           // Include the selected size
+  };
+
+  dispatch(addBasketList(itemToAdd));
+};
+
+// Function to remove an item from the basket
+const removeItemFromBasket = () => {
+  dispatch(removeBasketList(item.id));
+};
+
+
+
   return (
+    <>
+    
     <div className="whole-detail">
+    
       <div className="detail-center">
+      <div className="back-to-shop-link">
+    <Link  to="/shop">
+            <button className="back-to-shop" style={{cursor:'pointer'}}>← Back to Shop </button>
+    </Link>
+
+    </div>
+        
         <div className="detail-left">
           <img src={item.img} alt="" />
         </div>
@@ -126,15 +157,15 @@ export default function DetailCom() {
           </div>
           <p className="detail-price">${item.price}</p>
           <button
-            className={inBasket ? "detail-add detail-remove" : "detail-add"}
-            onClick={() => {
-              inBasket ? dispatch(removeBasketList(item.id)) : dispatch(addBasketList(item))
-            }}
-          >
-            {inBasket ? "Remove from basket" : "Add to basket"}
-          </button>
+  className={inBasket ? "detail-add detail-remove" : "detail-add"}
+  onClick={inBasket ? removeItemFromBasket : addItemToBasket} // Decide which function to call based on inBasket
+>
+  {inBasket ? "Remove from basket" : "Add to basket"}
+</button>
         </div>
       </div>
     </div>
+    </>
+    
   )
 }

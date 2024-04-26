@@ -8,8 +8,17 @@ const basketStore = createSlice({
   initialState,
   reducers: {
     addBasketList: (state, action) => {
-      console.log("action.payload", action.payload)
-      state.basketList.push(action.payload)
+      // action.payload should now include { id, color, size }
+      const existingItem = state.basketList.find(item => item.id === action.payload.id);
+      if (existingItem) {
+        existingItem.count += 1;
+        // Update the color and size if they're different
+        existingItem.color = action.payload.color;
+        existingItem.size = action.payload.size;
+      } else {
+        // Add the new item with the selected color and size
+        state.basketList.push({...action.payload, count: 1});
+      }
     },
     clearBasketList: state => {
       state.basketList.length = 0

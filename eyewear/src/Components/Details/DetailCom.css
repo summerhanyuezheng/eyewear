@@ -1,8 +1,10 @@
 .whole-detail {
   width: 100%;
+  
 }
 
 .detail-center {
+  position: relative;
   height: 500px;
   width: 1000px;
   margin: 0 auto;
@@ -176,4 +178,26 @@ datalist {
   transform: translate(-50%, -50%);
   font-size: 24px; 
   z-index: 1;
+}
+
+.back-to-shop{
+  font-size: 18px;
+  background-color: transparent;
+  font-weight: 600;
+  display: flex;
+  
+  
+
+}
+
+/* unvisited link */
+a:link {
+  text-decoration: none; /* Removes underline */
+  color: black; /* Sets a specific color for unvisited links */
+}
+
+.back-to-shop-link{
+  position: absolute;
+  left: 0px;
+    top: -30px;
 }

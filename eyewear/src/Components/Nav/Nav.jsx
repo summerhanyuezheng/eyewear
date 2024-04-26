@@ -58,6 +58,18 @@ export default function Nav({ SignUp = "Sign Up", LogIn = "Log In" }) {
     dispatch(decrementCount(id))
   }
 
+  //for shopping basket color display
+  const colorToHex = (colorName) => {
+    if (!colorName) return '#FFFFFF'; // return default color if colorName is not valid
+    const colors = {
+      red: '#FF0000',
+      blue: '#0000FF',
+      green: '#008000',
+      // ... more colors
+    };
+    return colors[colorName.toLowerCase()] || '#FFFFFF'; // Fallback color if colorName is not in the colors object
+  };
+
   //清空购物车
   const clearFn = () => {
     console.log("清空")
@@ -105,13 +117,34 @@ export default function Nav({ SignUp = "Sign Up", LogIn = "Log In" }) {
               <div className="img-basket">
                 <img src={item.img} alt={item.name} />
               </div>
-              <div className="name-and-quantity">
-                <p className="name-basket">{item.name}</p>
-                <div className="count-basket">
-                  <p className="quantity-text">Quantity</p>
-                  <p className="count-text">{item.count}</p>
+              
+              
+                {/* name */}
+                <div className="name-basket">{item.name}</div>
+                {/* quantity, color and size */}
+                <div className="quan-col-size big-flex">
+                  {/* quantity */}
+                  <div className="count-basket small-flex">
+                    <p className="quantity-text">Quantity:</p>
+                    <p className="count-text">{item.count}</p>
+                  </div>
+                  {/* color */}
+                  <div className="color-basket small-flex">
+                    <p className="quantity-text">Color:</p>
+                    <div className="color-indicator" style={{ backgroundColor: colorToHex(item.color) }}></div>
+                  </div>
+                  {/* size */}
+                  <div className="size-basket small-flex">
+                  <p className="quantity-text">Size:</p>
+                  <p className="count-text"> {item.size}</p>   
+
+
+                  </div>
+
                 </div>
-              </div>
+            
+              
+              
 
               <p className="price-basket">${item.price * item.count}</p>
               <button

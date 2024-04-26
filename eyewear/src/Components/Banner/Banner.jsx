@@ -12,7 +12,7 @@ export default function Banner() {
           </h2>
           <p>Buying eyewear should leave you happy and good-looking, with money in your pocket. Glasses, sunglasses, and contacts—we’ve got your eyes covered.</p>
           <Link to="/shop">
-            <button>Shop Now →</button>
+            <button style={{cursor:'pointer'}}>Shop Now →</button>
           </Link>
         </div>
         <div className="Banner-img">

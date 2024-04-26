@@ -194,6 +194,7 @@
   align-items: center;
   font-family: Tajawal, Helvetica, Arial, sans-serif;
   margin-bottom: 15px;
+  justify-content: space-evenly;
 }
 
 .add-minus {
@@ -270,4 +271,28 @@
 
 .locate-totalAmount {
   position: relative;
+}
+
+
+.color-indicator {
+  width: 15px; 
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  
+}
+
+
+.big-flex{
+  display: flex;
+  width: 200px;
+  
+  
+}
+
+
+.small-flex{
+  display: flex;
+  justify-content: space-evenly;
+  width: 80px;
 }
