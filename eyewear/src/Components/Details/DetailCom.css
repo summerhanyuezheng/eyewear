@@ -130,12 +130,12 @@ datalist {
 }
 
 .color-div .ppink{
-  background-color: pink;
+  background-color: #ffc0cb;
 }
 
 
 .color-div .black{
-  background-color: black;
+  background-color: #000000;
 }
 
 .color-div .blue{
@@ -143,11 +143,11 @@ datalist {
 }
 
 .color-div .brown{
-  background-color: brown;
+  background-color: #a52a2a;
 }
 
 .color-div .yellow{
-  background-color: rgb(255, 166, 0);
+  background-color: #ffa600;
 }
 
 .color-div .green{
