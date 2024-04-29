@@ -60,14 +60,19 @@ export default function Nav({ SignUp = "Sign Up", LogIn = "Log In" }) {
 
   //for shopping basket color display
   const colorToHex = (colorName) => {
-    if (!colorName) return '#FFFFFF'; // return default color if colorName is not valid
+    if (!colorName) return '#FFFFFF'; 
+    // return default color if colorName is not valid
     const colors = {
-      red: '#FF0000',
+      ppink: '#ffc0cb',
       blue: '#0000FF',
       green: '#008000',
+      black:'#000000',
+      brown:'#a52a2a',
+      yellow:'#ffa600'
+
       // ... more colors
     };
-    return colors[colorName.toLowerCase()] || '#FFFFFF'; // Fallback color if colorName is not in the colors object
+    return colors[colorName.toLowerCase()] || '#FFFFFF'; // if colorName is not in the colors object
   };
 
   //清空购物车

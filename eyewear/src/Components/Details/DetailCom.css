@@ -190,11 +190,7 @@ datalist {
 
 }
 
-/* unvisited link */
-a:link {
-  text-decoration: none; /* Removes underline */
-  color: black; /* Sets a specific color for unvisited links */
-}
+
 
 .back-to-shop-link{
   position: absolute;
