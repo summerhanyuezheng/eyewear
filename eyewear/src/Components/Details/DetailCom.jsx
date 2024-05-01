@@ -81,7 +81,7 @@ export default function DetailCom() {
 
   
   //for select size part
-  const [size, setSize] = useState("")
+  const [size, setSize] = useState("28 mm")
   const handleChange = event => {
     setSize(event.target.value)
   }
@@ -97,7 +97,7 @@ const addItemToBasket = () => {
   const itemToAdd = {
     ...item,          // Spread the existing item details
     color: selectedColor, // Include the selected color
-    size: size,           // Include the selected size
+    size: size || "28 mm",           // Include the selected size
   };
 
   dispatch(addBasketList(itemToAdd));

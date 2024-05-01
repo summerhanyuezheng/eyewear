@@ -60,7 +60,7 @@ export default function Nav({ SignUp = "Sign Up", LogIn = "Log In" }) {
 
   //for shopping basket color display
   const colorToHex = (colorName) => {
-    if (!colorName) return '#FFFFFF'; 
+    if (!colorName) return '#000000'; 
     // return default color if colorName is not valid
     const colors = {
       ppink: '#ffc0cb',
@@ -72,7 +72,7 @@ export default function Nav({ SignUp = "Sign Up", LogIn = "Log In" }) {
 
       // ... more colors
     };
-    return colors[colorName.toLowerCase()] || '#FFFFFF'; // if colorName is not in the colors object
+    return colors[colorName.toLowerCase()] || '#000000'; // if colorName is not in the colors object
   };
 
   //清空购物车
